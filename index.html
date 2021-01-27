@@ -1,0 +1,164 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Formulario</title>
+</head>
+
+<body>
+
+    <div class="row justify-content-center mt-5 ">
+        <div class="col-md-6">
+            <div class="card body ">
+                <form class="row g-3 needs-validation" id="form" onsubmit="validateForm()">
+                    <div class="card-header bg-dark text-white">
+                        <h1>Payment Form Example</h1>
+                    </div>
+
+                    <!-- Primera linea -->
+
+                    <div class="col-md-4 position-relative">
+                        <label for="validationTooltip01" class="form-label">Card #</label>
+                        <input type="text" class="form-control" id="cardinput" value="" maxlength="16" />
+
+                    </div>
+                    <div class="col-md-4 position-relative">
+                        <label for="validationTooltip01" class="form-label">CVC #</label>
+                        <input type="text" class="form-control" id="cvc" value="" maxlength="3"
+                           >
+
+                    </div>
+                    <div class="col-md-4 position-relative">
+
+                        <label for="validationTooltip01" class="form-label">Amount</label>
+                        <i class="fas fa-dollar-sign"></i>
+                        <input type="text" class="form-control" id="amount" value="" >
+
+                    </div>
+                    <!-- Segunda fila -->
+
+                    <div class="col-md-6 position-relative">
+                        <label for="validationTooltip01" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="name" value=""  >
+                        <div class="valid-tooltip">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-6 position-relative">
+                        <label for="validationTooltip02" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="validationTooltip02" value=""  >
+                        <div class="valid-tooltip">
+                            Looks good!
+                        </div>
+                    </div>
+                    <!-- Tercera fila -->
+
+                    <div class="col-md-6 position-relative">
+                        <label for="validationTooltip03" class="form-label">City</label>
+                        <input type="text" class="form-control" id="validationTooltip03" >
+                        <div class="invalid-tooltip">
+                            Please provide a valid city.
+                        </div>
+                    </div>
+                    <div class="col-md-3 position-relative">
+                        <label for="validationTooltip04" class="form-label">State</label>
+                        <select class="form-select" id="validationTooltip04" >
+                            <option selected disabled value="">Pick a state</option>
+                            <option>Limón</option>
+                            <option>San Jose</option>
+                            <option>Cartago</option>
+                        </select>
+                        <div class="invalid-tooltip">
+                            Please select a valid state.
+                        </div>
+                    </div>
+                    <div class="col-md-3 position-relative">
+                        <label for="validationTooltip05" class="form-label">Postal Code</label>
+                        <input type="text" class="form-control" id="validationTooltip05" >
+                        <div class="invalid-tooltip">
+                            Please provide a valid zip.
+                        </div>
+                    </div>
+                    <!-- Metodo de pago y botones-->
+                    <div class="col-md-6 position-relative" id="radio">
+                        <label>We Accept:</label>
+                        <div class="bg-dark text-white">
+                            <div class="form-check form-check-inline ">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1"><i
+                                        class="fab fa-cc-mastercard"></i></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option2">
+                                <label class="form-check-label" for="inlineRadio1"><i
+                                        class="fab fa-cc-visa"></i></label>
+                            </div>
+
+
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option3">
+                                <label class="form-check-label" for="inlineRadio1"><i
+                                        class="fab fa-cc-mastercard"></i></label>
+                            </div>
+
+
+
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1"><i
+                                        class="fab fa-cc-mastercard"></i></label>
+                            </div>
+
+
+
+
+                        </div>
+
+
+                    </div>
+                    <!-- TextArea -->
+                    <div class="col-md-6 position-relative">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Message</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="col-12">
+                        <div class="card-header">
+
+                            <input type="submit" class="btn btn-dark" id="bot"/>
+                            <button type="button" class="btn btn-dark float-right" id="but">Cancel</button>
+
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://kit.fontawesome.com/f879add62b.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="index.js"></script>
+
+</body>
+
+</html>
